@@ -1,0 +1,150 @@
+/*  Font Familys
+font-family: 'Lexend Deca', sans-serif;
+font-family: 'Big Shoulders Display', cursive; 
+*/
+
+:root {
+    --headings-only: 'Big Shoulders Display', cursive;
+    --others-only: 'Lexend Deca', sans-serif;
+    --orange: hsl(31, 77%, 52%);
+    --cyon: hsl(184, 100%, 22%);
+    --dark-cyon: hsl(179, 100%, 13%);
+    --paragraph: hsla(0, 0%, 100%, 0.75);
+    --others: hsl(0, 0%, 95%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Main content Style */
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    height: 85vh;
+    width: 900px;
+    margin: 50px auto;
+}
+
+img {
+    height: 41px;
+    margin: 18px 0;
+    width: fit-content;
+}
+
+.heading {
+    font-family: var(--headings-only);
+    padding: 12px 0;
+    font-size: 2rem;
+}
+
+.car {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 300px;
+    height: 380px;
+    font-family: var(--others-only);
+    font-size: 15px;
+    color: var(--others);
+    padding: 40px;
+}
+
+#first {
+    background-color: var(--orange);
+    border-radius: 10px 0 0 10px;
+}
+
+#second {
+    background-color: var(--cyon);
+}
+
+#third {
+    background-color: var(--dark-cyon);
+    border-radius: 0 10px 10px 0;
+}
+
+.details {
+    opacity: 0.8;
+    padding: 10px 0;
+}
+
+.btn {
+    height: 36px;
+    width: 110px;
+    padding: 3px;
+    margin-top: auto;
+    border: 2px solid white;
+    border-radius: 50px;
+    cursor: pointer;
+    background-color: var(--others);
+    font-family: var(--others-only);
+    transition: ease-in 0.2s;
+}
+
+div:first-child .btn {
+    color: var(--orange);
+}
+
+div:first-child .btn:hover {
+    background-color: var(--orange);
+    color: white;
+}
+
+div:nth-child(2) .btn {
+    color: var(--cyon);
+}
+
+div:nth-child(2) .btn:hover {
+    background-color: var(--cyon);
+    color: white;
+}
+
+div:last-child .btn {
+    color: var(--dark-cyon);
+}
+
+div:last-child .btn:hover {
+    background-color: var(--dark-cyon);
+    color: white;
+}
+
+#foot {
+    color: hsla(0, 2%, 30%, 0.856);
+    font-family: var(--others-only);
+    font-size: 15px;
+    text-align: center;
+    margin: 12px auto;
+}
+
+@media (max-width: 768px) {
+    .main {
+        display: flex;
+        width: auto;
+        flex-direction: column;
+        height: auto;
+        margin: 20px auto 80px auto;
+    }
+
+    .car {
+        height: auto;
+        width: fit-content;
+        margin: auto 20px;
+    }
+
+    #first {
+        border-radius: 10px 10px 0 0;
+    }
+
+    #third {
+        border-radius: 0 0 10px 10px;
+    }
+
+    .btn {
+        margin-top: 20px;
+    }
+}
